@@ -193,3 +193,41 @@ li[aria-selected="true"] {
 [data-testid="stCodeBlock"] span {
     color: #111827 !important;
 }
+/* ============================= */
+/* FORCE LIGHT INPUTS EVERYWHERE */
+/* ============================= */
+
+/* BaseWeb input wrapper */
+div[data-baseweb="input"] {
+    background-color: #ffffff !important;
+}
+
+/* Actual input field */
+div[data-baseweb="input"] input {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+}
+
+/* Input when focused */
+div[data-baseweb="input"] input:focus {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+}
+
+/* Disable dark color-scheme leakage */
+input,
+textarea,
+select {
+    color-scheme: light !important;
+}
+
+/* Fix inputs inside columns/containers */
+[data-testid="stVerticalBlock"] input {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+}
+
+/* Fix Data Editor inline inputs */
+[data-testid="stDataEditor"] input {
+    background-color

@@ -75,7 +75,7 @@ def toggle_add_form():
 def open_mapping(index):
     st.session_state.selected_partner_index = index
     st.session_state.current_view = 'mapping'
-    st.rerun()
+    st.experimental_rerun()
 
 def close_mapping():
     st.session_state.current_view = 'list'
@@ -98,7 +98,7 @@ def save_new_partner():
     }
     st.session_state.partners.append(new_p)
     st.session_state.show_add_form = False
-    st.rerun()
+    st.experimental_rerun()
 
 def delete_mapping_row(type_, index):
     p_idx = st.session_state.selected_partner_index
@@ -264,7 +264,7 @@ elif st.session_state.current_view == 'mapping':
         if ar4.button("➕ Add", key="add_txn_btn"):
             if new_pt:
                 add_mapping_row('txn', new_pt, new_it)
-                st.rerun()
+                st.experimental_rerun()
 
     # --- SECTION B: Header Mapping ---
     with st.container():
@@ -297,4 +297,4 @@ elif st.session_state.current_view == 'mapping':
         if ahr4.button("➕ Add", key="add_head_btn"):
             if new_ph:
                 add_mapping_row('header', new_ih, new_ph)
-                st.rerun()
+                st.experimental_rerun()
