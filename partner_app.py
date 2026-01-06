@@ -121,15 +121,15 @@ def save_mappings():
 
 # Sidebar (Navigation)
 with st.sidebar:
-    st.image("assets/mmtclogo.png", width="stretch")
+    st.image("assets/mmtclogo.png")
     st.markdown("### ")
     
     # Custom Menu Buttons
-    if st.button("👥 Partners", width="stretch", type="primary"):
+    if st.button("👥 Partners", type="primary"):
         st.session_state.current_view = 'list'
     # if st.button("📊 Analytics", width="stretch"):
     #     pass
-    if st.button("⚙️ Settings", width="stretch"):
+    if st.button("⚙️ Settings"):
         pass
 
 # --- VIEW 1: PARTNER LIST & ADD FORM ---
@@ -137,12 +137,12 @@ if st.session_state.current_view == 'list':
     
     # Header Section
     col_h1, col_h2 = st.columns([6, 1])
-    col_h1.title("Partner Integrations")
+    col_h1.title("Partner Integrations22")
     col_h2.button("➕ Add New Partner", on_click=toggle_add_form, key="btn_add_partner")
 
     # A. The "Add New Partner" Form (Hidden/Shown based on toggle)
     if st.session_state.show_add_form:
-        with st.container(border=True):
+        with st.container():
             st.subheader("New Integration Setup")
             
             # Row 1
@@ -234,7 +234,7 @@ elif st.session_state.current_view == 'mapping':
     st.button("← Back to List", on_click=close_mapping)
 
     # --- SECTION A: Transaction Type Mapping ---
-    with st.container(border=True):
+    with st.container():
         st.subheader("Transaction Type Mapping")
         
         # Table Header
@@ -266,7 +266,7 @@ elif st.session_state.current_view == 'mapping':
                 st.rerun()
 
     # --- SECTION B: Header Mapping ---
-    with st.container(border=True):
+    with st.container():
         st.subheader("Header Mapping")
         st.markdown("Map internal IT system headers to the partner's required headers.")
         

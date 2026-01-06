@@ -120,3 +120,76 @@ p, div, span, label, .stMarkdown p {
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
+
+/* ============================= */
+/* FIX SELECTBOX & DROPDOWN TEXT */
+/* ============================= */
+
+/* Selectbox input (closed state) */
+div[data-baseweb="select"] > div {
+    background-color: white !important;
+    color: #111827 !important;
+}
+
+/* Selected value text */
+div[data-baseweb="select"] span {
+    color: #111827 !important;
+}
+
+/* Dropdown menu container */
+ul[role="listbox"] {
+    background-color: white !important;
+}
+
+/* Dropdown options */
+li[role="option"] {
+    background-color: white !important;
+    color: #111827 !important;
+}
+
+/* Hovered option */
+li[role="option"]:hover {
+    background-color: #f3f4f6 !important;
+    color: #111827 !important;
+}
+
+/* Active / selected option */
+li[aria-selected="true"] {
+    background-color: #e5e7eb !important;
+    color: #111827 !important;
+}
+
+/* Text inputs placeholder */
+.stTextInput input::placeholder {
+    color: #9ca3af !important;
+}
+
+/* Text inputs text */
+.stTextInput input {
+    background-color: white !important;
+    color: #111827 !important;
+}
+/* ============================= */
+/* FIX st.code() DARK BLOCKS     */
+/* ============================= */
+
+[data-testid="stCodeBlock"] {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    padding: 10px 12px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 14px !important;
+}
+
+/* Remove inner dark pre background */
+[data-testid="stCodeBlock"] pre {
+    background-color: transparent !important;
+    color: #111827 !important;
+}
+
+/* Remove syntax highlight colors */
+[data-testid="stCodeBlock"] span {
+    color: #111827 !important;
+}

@@ -121,15 +121,15 @@ def save_mappings():
 
 # Sidebar (Navigation)
 with st.sidebar:
-    st.image("assets/mmtclogo.png", width="stretch")
+    st.image("assets/mmtclogo.png")
     st.markdown("### ")
     
     # Custom Menu Buttons
-    if st.button("👥 Partners", width="stretch", type="primary"):
+    if st.button("👥 Partners", type="primary"):
         st.session_state.current_view = 'list'
     # if st.button("📊 Analytics", width="stretch"):
     #     pass
-    if st.button("⚙️ Settings", width="stretch"):
+    if st.button("⚙️ Settings"):
         pass
 
 # --- VIEW 1: PARTNER LIST & ADD FORM ---
@@ -181,28 +181,29 @@ if st.session_state.current_view == 'list':
 
     st.markdown("### Existing Partners")
     
-    # We use Data Editor to allow the "Active" toggle to be interactive
-    edited_df = st.experimental_data_editor(
-        display_df,
-        column_config={
-            "Active": st.column_config.CheckboxColumn(
-                "Status",
-                help="Toggle status",
-                default=False,
-            ),
-            "Category": st.column_config.TextColumn(
-                "Process Category",
-                width="medium",
-            ),
-        },
-        disabled=["ID", "Partner Name", "Category", "Sub-Process"],
-        hide_index=True,
-        width="stretch",
-        key="partner_table"
-    )
+    
+
+    left, right = st.columns([4, 1])
+    
+    with left:
+        st.dataframe(
+            display_df[["ID", "Partner Name", "Category", "Sub-Process"]],
+            use_container_width=True,
+            height=420
+        )
+    
+    with right:
+        active_df = st.experimental_data_editor(
+            display_df[["Active"]],
+            key="partner_active_editor",
+            height=420
+        )
+
+
+
 
     # Update the session state with edited status
-    for idx, row in edited_df.iterrows():
+    for idx, row in active_df.iterrows():
         st.session_state.partners[idx]['status'] = row['Active']
 
     # Interaction: Selection Logic
