@@ -1,0 +1,86 @@
+[
+  {
+    "Main_Columns": "partner_cust_id",
+    "PARTNER_ALIASES": ["customerrefno","customer_ref_no"]
+  },
+  {
+    "Main_Columns": "cust_id",
+    "PARTNER_ALIASES": ["dgcustomerrefno", "dg_customer_no","dg_customer_ref_no"]
+  },
+  {
+    "Main_Columns": "name",
+    "PARTNER_ALIASES": ["name"]
+  },
+  {
+    "Main_Columns": "operation",
+    "PARTNER_ALIASES": ["transactiontype","transaction_type"]
+  },
+  {
+    "Main_Columns": "partner_id",
+    "PARTNER_ALIASES": ["source"]
+  },
+  {
+    "Main_Columns": "transaction_no",
+    "PARTNER_ALIASES": ["pamporderid","pamp_order_id"]
+  },
+  {
+    "Main_Columns": "invoice_id",
+    "PARTNER_ALIASES": ["invoiceid","invoice_id"]
+  },
+  {
+    "Main_Columns": "partner_trans_No",
+    "PARTNER_ALIASES": ["transactionid","transaction_id"]
+  },
+  {
+    "Main_Columns": "transaction_date",
+    "PARTNER_ALIASES": ["transactiondate"]
+  },
+  {
+    "Main_Columns": "transaction_time",
+    "PARTNER_ALIASES": ["transactiontime"]
+  },
+  {
+    "Main_Columns": "quantity_grams",
+    "PARTNER_ALIASES": ["quantity"]
+  },
+  {
+    "Main_Columns": "pre_tax_amt",
+    "PARTNER_ALIASES": ["goldamount","gold_amount","pre_tax_amount"]
+  },
+  {
+    "Main_Columns": "tax_type",
+    "PARTNER_ALIASES": ["taxamount","tax_amount"]
+  },
+  {
+    "Main_Columns": "post_tax_Amt",
+    "PARTNER_ALIASES": ["totalamount","total_amount"]
+  },
+  {
+    "Main_Columns": "pincode",
+    "PARTNER_ALIASES": ["pincode"]
+  },
+  {
+    "Main_Columns": "state",
+    "PARTNER_ALIASES": ["state"]
+  },
+  {
+    "Main_Columns": "settlement_ref_id",
+    "PARTNER_ALIASES": ["rrn","settlement_ref_id"]
+  },
+  {
+    "Main_Columns": "quote_id",
+    "PARTNER_ALIASES": ["quote_id", "quoteid"]
+  },
+  {
+    "Main_Columns": "product_sku",
+    "PARTNER_ALIASES": ["productsku"]
+  },
+  {
+    "Main_Columns": "settlement_status",
+    "PARTNER_ALIASES": ["transaction_status","transaction_status"]
+  },
+  {
+    "Main_Columns": "remarks",
+    "PARTNER_ALIASES": ["remarks"]
+  }
+]

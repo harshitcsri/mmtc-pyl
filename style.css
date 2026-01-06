@@ -1,0 +1,122 @@
+/* --- 1. GOOGLE FONTS & ICONS --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* --- 2. GLOBAL VARIABLES --- */
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-light: #f3f4f6;
+    --bg-white: #ffffff;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --success: #10b981;
+    --danger: #ef4444;
+}
+
+/* --- 3. GENERAL APP STYLING --- */
+body {
+    background-color: white !important;
+    color: black !important;
+}
+.stApp {
+    background-color: var(--bg-white) !important;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-dark) !important;
+}
+
+/* --- 4. TYPOGRAPHY --- */
+h1, h2, h3, h4, h5, h6, 
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+    font-family: 'Cinzel', serif !important;
+    font-weight: 600 !important;
+    color: var(--text-dark) !important;
+}
+
+p, div, span, label, .stMarkdown p {
+    color: var(--text-dark) !important;
+}
+
+.stCaption {
+    color: var(--text-muted) !important;
+}
+
+/* --- 5. SIDEBAR --- */
+[data-testid="stSidebar"] {
+    background-color: var(--bg-white) !important;
+    border-right: 1px solid var(--border-color);
+}
+
+/* --- 6. BUTTONS --- */
+
+/* Default Button (Secondary Style) */
+.stButton > button {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.stButton > button:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+/* Primary Buttons (Targeted by Key) */
+.st-key-btn_create > button,
+.st-key-btn_open_config > button,
+.st-key-btn_save_mapping > button,
+.st-key-btn_add_partner > button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.st-key-btn_create > button:hover,
+.st-key-btn_open_config > button:hover,
+.st-key-btn_save_mapping > button:hover,
+.st-key-btn_add_partner > button:hover {
+    background-color: var(--primary-hover) !important;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+    color: white !important;
+}
+
+/* --- 7. CARDS & CONTAINERS --- */
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background-color: var(--bg-white) !important;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+/* --- 8. INPUTS & TABLES --- */
+.stTextInput input, 
+.stSelectbox div[data-baseweb="select"] {
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.stTextInput input:focus, 
+.stSelectbox div[data-baseweb="select"]:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+[data-testid="stDataEditor"] {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--bg-white) !important;
+}
+
+/* --- 9. UTILITIES --- */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
